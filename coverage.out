@@ -1,0 +1,4 @@
+mode: set
+my_task/A_Service/main.go:14.30,16.2 1 1
+my_task/A_Service/main.go:19.35,21.2 1 0
+my_task/A_Service/main.go:23.13,32.2 7 0

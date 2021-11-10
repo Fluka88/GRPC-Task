@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option go_package = "my_task/my_task";
+
+package my_task;
+
+// The greeting service definition.
+service DBService {
+  // Connects to DB
+  rpc Connect (Request) returns (Reply) {}
+  //put data in table
+  rpc Create (Movie) returns (Reply) {}
+  //get data by title
+  rpc Read (Request) returns (MovieArray) {}
+  //deletes data by title
+  rpc Delete (Request) returns (Reply) {}
+  //pings
+  rpc Ping (Request) returns (Reply) {}
+}
+
+message Request {
+string name = 1;
+}
+
+message Reply {
+string message = 1;
+}
+
+message Id {
+  string id = 1;
+}
+
+message MovieArray{
+  repeated Movie movie = 1;
+}
+
+message Movie {
+  string title = 1;
+  string year = 2;
+}
